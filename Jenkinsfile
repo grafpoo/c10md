@@ -5,7 +5,7 @@ stage("Build Info") {
     def commit = checkout scm
     echo "latest commit id: ${commit.GIT_COMMIT}"
     stage('Build') {
-      docker.build("{service}")
+      docker.build("${service}")
     }
   }
 }
